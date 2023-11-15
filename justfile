@@ -1,8 +1,8 @@
 build:
-  docker build -t pandoc .
+  docker build -t glort .
 
 run:
-  docker run -v $(pwd):/project pandoc
+  docker run -v $(pwd):/project glort
 
 watch:
-  docker run -it -e GLORT_WATCH=1 -v $(pwd):/project pandoc
+  docker run --rm -it -e GLORT_WATCH=1 -v $(pwd):/project glort

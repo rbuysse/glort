@@ -21,7 +21,7 @@ if [ -z $GLORT_WATCH ];
     else
         run_pandoc;
         echo "Watching for changes..."
-        while inotifywait -qe modify resume.md github.css;
+        while inotifywait -qe modify "$INFILE" "$CSSFILE";
         do run_pandoc;
     done
 fi
